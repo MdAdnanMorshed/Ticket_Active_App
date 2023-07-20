@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:get/get.dart';
 import 'package:ticket_active/app/modules/screen_one/bindings/screen_one_binding.dart';
