@@ -3,8 +3,13 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
+  static const screenOne = _Paths.SCREENONE;
+  static const screenTwo = _Paths.SCREENTWO;
 }
 
 abstract class _Paths {
   _Paths._();
+  static const SCREENONE = '/screen-one';
+  static const SCREENTWO = '/screen-two';
+
 }

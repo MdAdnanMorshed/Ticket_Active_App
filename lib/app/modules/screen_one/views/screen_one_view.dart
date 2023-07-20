@@ -13,10 +13,38 @@ class ScreenOneView extends GetView<ScreenOneController> {
         title: const Text('ScreenOneView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'ScreenOneView is working',
-          style: TextStyle(fontSize: 20),
+      body: Card(
+        child: Container(
+          height: Get.size.width,
+          width: Get.size.width,
+          color: Colors.green,
+          child: Column(
+            children: [
+              Expanded(
+                  child: Row(
+                children: [
+                  Text('Left'),
+                  Column(
+                    children: [
+                      Text('This is your Entry Ticket'),
+                      Text('Order ID: 299987'),
+                      Text('Ticket Price : 700 TK'),
+                      Text('Active'),
+                    ],
+                  ),
+                 Image.asset('assets/qr.png')
+                ],
+              )),
+              Expanded(
+                  child: Row(
+                    children: [
+                      Text('Left'),
+                      Text('Center'),
+                      Text('Right'),
+                    ],
+                  ))
+            ],
+          ),
         ),
       ),
     );
