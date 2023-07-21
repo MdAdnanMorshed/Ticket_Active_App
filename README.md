@@ -28,6 +28,7 @@ A few resources to get :
 # Screenshot
 <img src="assets/screens/1.PNG" width="30%"><img src="assets/screens/3.PNG" width="30%">
 <img src="assets/screens/2.PNG" width="30%"><img src="assets/screens/4.PNG" width="30%">
+<img src="assets/screens/5.PNG" width="30%"><img src="assets/screens/5.PNG" width="30%">
 <img src="assets/logo.PNG" width="30%">
 
 

@@ -15,14 +15,12 @@ class Task3View extends GetView<Task3Controller> {
         title: const Text('Task3View'),
         centerTitle: true,
       ),
-      body:
-      Obx(() {
+      body: Obx(() {
         if (!controller.isLoadingData.value) {
           return Center(
             child: ShimmerLoading.vListViewLoading(),
           );
-        }
-        else {
+        } else {
           if (controller.dataMSList.isEmpty) {
             return const Center(child: Text('No Data Found!'));
           } else {
@@ -30,7 +28,13 @@ class Task3View extends GetView<Task3Controller> {
               itemCount: controller.dataMSList.length,
               itemBuilder: (BuildContext context, int index) {
                 TicketMSModel data = controller.dataMSList[index];
-                return Text(data.toJson().toString());
+                return Card(
+                  child: Container(
+                    
+                      margin: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                      padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                      child: Text(data.toJson().toString())),
+                );
               },
             );
           }
@@ -38,4 +42,6 @@ class Task3View extends GetView<Task3Controller> {
       }),
     );
   }
+
+
 }

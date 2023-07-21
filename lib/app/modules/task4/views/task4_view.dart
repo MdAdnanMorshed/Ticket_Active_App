@@ -29,7 +29,12 @@ class Task4View extends GetView<Task4Controller> {
               itemCount: controller.dataDTList.length,
               itemBuilder: (BuildContext context, int index) {
                 TicketDTModel data = controller.dataDTList[index];
-                return Text(data.toJson().toString());
+                return Card(
+                  child: Container(
+                      margin: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                      padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
+                      child: Text(data.toJson().toString())),
+                );
               },
             );
           }
