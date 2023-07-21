@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../data/models/ticket_dt_model.dart';
+import '../../../data/utils/shimmer_effect.dart';
 import '../controllers/task4_controller.dart';
 
 class Task4View extends GetView<Task4Controller> {
@@ -13,12 +15,26 @@ class Task4View extends GetView<Task4Controller> {
         title: const Text('Task4View'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'Task4View is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: Obx(() {
+        if (!controller.isLoadingData.value) {
+          return Center(
+            child: ShimmerLoading.vListViewLoading(),
+          );
+        }
+        else {
+          if (controller.dataDTList.isEmpty) {
+            return const Center(child: Text('No Data Found!'));
+          } else {
+            return ListView.builder(
+              itemCount: controller.dataDTList.length,
+              itemBuilder: (BuildContext context, int index) {
+                TicketDTModel data = controller.dataDTList[index];
+                return Text(data.toJson().toString());
+              },
+            );
+          }
+        }
+      }),
     );
   }
 }
