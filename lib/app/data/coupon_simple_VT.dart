@@ -8,9 +8,11 @@ class VerticalCouponExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return CouponCard(
       height: 300,
+
       curvePosition: 180,
       curveRadius: 30,
       borderRadius: 10,
+
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
@@ -55,7 +57,9 @@ class VerticalCouponExample extends StatelessWidget {
         width: double.maxFinite,
         decoration: const BoxDecoration(
           border: Border(
-            top: BorderSide(color: Colors.white),
+
+            top: BorderSide(color: Colors.green),
+
           ),
         ),
         padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 42),

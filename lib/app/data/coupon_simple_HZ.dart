@@ -1,13 +1,13 @@
 import 'package:coupon_uikit/coupon_uikit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-class HorizontalCouponExample1 extends StatelessWidget {
-  const HorizontalCouponExample1({Key? key}) : super(key: key);
+class TicketsUIHZ extends StatelessWidget {
+  const TicketsUIHZ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-     Color primaryColor = Colors.orange.shade100;
-     Color secondaryColor = Colors.orange.shade100;
+     Color primaryColor = Colors.yellow.shade200;
+     Color secondaryColor = Colors.yellow.shade200;
 
     return CouponCard(
 
@@ -44,9 +44,15 @@ class HorizontalCouponExample1 extends StatelessWidget {
           ),
         ),
       ),
-      secondChild: Container(
+      secondChild:
+
+    CustomPaint(
+    painter: PainterOne1(),
+    child:
+      Container(
         width: double.maxFinite,
-        padding: const EdgeInsets.all(18),
+        padding: const EdgeInsets.all(30),
+
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -93,6 +99,33 @@ class HorizontalCouponExample1 extends StatelessWidget {
           ],
         ),
       ),
+    ),
     );
   }
+}
+
+
+
+class PainterOne1 extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    double w = size.width;
+    double h = size.height;
+    double r = 4;
+    var _paint = Paint();
+    _paint.color = Colors.white; //dots color
+    _paint.strokeWidth = 4; //dots thickness
+    _paint.strokeCap = StrokeCap.round;
+
+    for (double i = -300; i < 300; i = i + 15) {
+      // 15 is space between dots
+      if (i % 3 == 0)
+        canvas.drawLine(Offset(0.0, i), Offset( 0.0,i + 5), _paint);
+    }
+
+  }
+
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) => false;
 }

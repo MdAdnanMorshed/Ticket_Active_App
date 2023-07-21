@@ -1,5 +1,4 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../data/coupon_simple_HZ.dart';
@@ -12,7 +11,6 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: AppBar(
         title:  Container(
 
@@ -21,7 +19,7 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
           margin: const EdgeInsets.only(top: 10),
           padding: const EdgeInsets.only(left: 2),
           decoration: BoxDecoration(
-            color: Colors.orange,
+            color: Colors.white,
             borderRadius: BorderRadius.circular(5),
 
           ),
@@ -30,8 +28,8 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
             mainAxisSize: MainAxisSize.max,
 
             children: [
-              Expanded(child:Icon(Icons.arrow_back,color: Colors.white,)),
-              Expanded(child: Text('My Tickets',style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Expanded(child:Icon(Icons.arrow_back_ios,color: Colors.orange,)),
+              Expanded(child: Text('My Tickets',style: TextStyle(color: Colors.orange,fontSize: 20),)),
               Expanded(child: Container()),
             ],
           ),
@@ -42,12 +40,12 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
         child: Column(
           children: [
 
-
             Container(
               padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
               margin: EdgeInsets.symmetric(vertical: 10,horizontal: 0),
               //width: Get.size.width,
-              child:HorizontalCouponExample1()
+              child:
+              TicketsUIHZ()
 
             ),
             SizedBox(height: 10,),
@@ -87,15 +85,8 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
           ],
         ),
       ),
-
-
-
-
     );
   }
-
-
-
 }
 
 class PainterOne extends CustomPainter {
