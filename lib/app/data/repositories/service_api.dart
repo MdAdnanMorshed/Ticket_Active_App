@@ -9,7 +9,7 @@ class ServiceAPI {
 
   /// Task 03
   Future getApiTicketMS() async {
-    Uri url = Uri.parse('${baseUrl}mock_ticket_ms?MOBILE_NUMBER =01717956094');
+    Uri url = Uri.parse('${baseUrl}mock_ticket_ms?MOBILE_NUMBER=01717956094');
 
     try {
       final response = await http.get(url, headers: {

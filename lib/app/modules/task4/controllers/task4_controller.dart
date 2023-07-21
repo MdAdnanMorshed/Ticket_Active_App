@@ -36,9 +36,9 @@ class Task4Controller extends GetxController {
     var bodyMap = json.decode(resValue.body);
     var resCode = resValue.statusCode;
 
-    if (bodyMap['status'] == 'ok') {
+
       if (resCode == 200 || resCode == 201 || resCode == 202) {
-        for (var data in bodyMap['items']) {
+        for (var data in bodyMap["items"]) {
           dataDTList.add(TicketDTModel.fromJson(data));
         }
         isLoadingData.value = true;
@@ -47,10 +47,6 @@ class Task4Controller extends GetxController {
           print(' else error ');
         }
       }
-    } else {
-      if (kDebugMode) {
-        print('Task3Controller.getTicketMS');
-      }
-    }
+
   }
 }

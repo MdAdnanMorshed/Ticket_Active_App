@@ -4,7 +4,7 @@ class TicketMSModel {
   String? mobileNumber;
   int? total;
   int? discountAmount;
-  double? subTotal;
+  dynamic subTotal;
   int? receivedAmount;
   int? returnAmount;
   String? paymentType;
@@ -12,13 +12,13 @@ class TicketMSModel {
   int? bunitFk;
   String? sellDate;
   String? couponCode;
-  double? vat;
+  dynamic vat;
   String? slType;
   String? trnId;
   int? discountAble;
   String? discountCoupon;
   int? discountPct;
-  int? vatableAmt;
+  dynamic vatableAmt;
   int? netAmt;
   int? appAvil;
   String? unixtimestamp;
