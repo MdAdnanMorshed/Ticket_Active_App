@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../data/coupon_simple_HZ.dart';
+import '../../../data/coupon_simple_HZ2.dart';
+import '../../../data/coupon_simple_VT.dart';
 import '../controllers/screen_two_controller.dart';
 
 class ScreenTwoView extends GetView<ScreenTwoController> {
@@ -38,124 +41,14 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
       body:SingleChildScrollView(
         child: Column(
           children: [
-            Container(color: Colors.orange.withOpacity(0.2),
-              height: 300,
-              width: Get.size.width,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-
-                itemCount: 3,
-                itemBuilder: (context, int index) {
-                  return
-                    Container(
-
-                      margin: EdgeInsets.symmetric(vertical: 10,horizontal: 25),
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 2,
-                            blurRadius: 2,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(0),
-
-                      ),
-
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: CustomPaint(
-                          painter: PainterOne(),
-                          child:
-                          Container(
-                            padding: const EdgeInsets.only(left: 10,top: 12,right: 10,bottom: 10),
-                            margin: const EdgeInsets.all(2.0),
-                            height: Get.size.width / 2,
-                            width: Get.size.width,
-                            color: Colors.white10,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Expanded(child: Image.asset('assets/babuland.png')),
-                                    Expanded(
-                                      flex: 4,
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.center,
-                                          mainAxisAlignment: MainAxisAlignment.start,
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            Text('This is your Entry Ticket',style: TextStyle(fontWeight: FontWeight.bold),),
-                                            Text('Order ID: 299987'),
-                                            Text('Ticket Price : 700 TK'),
 
 
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+              margin: EdgeInsets.symmetric(vertical: 10,horizontal: 0),
+              //width: Get.size.width,
+              child:HorizontalCouponExample1()
 
-                                            Container(
-                                              alignment: Alignment.center,
-                                              height: Get.size.width*.1,
-                                              width: Get.size.width/ 3,
-                                              margin: const EdgeInsets.only(top: 10),
-                                              decoration: BoxDecoration(
-                                                color: Colors.orange,
-                                                borderRadius: BorderRadius.circular(5),
-
-                                              ),
-                                              child:Text('Active',style: TextStyle(color: Colors.white,fontSize: 20),),
-                                            ),
-
-
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                    Expanded(
-                                        child: Image.asset(
-                                          'assets/qr.png',
-                                        )),
-                                  ],
-                                ),
-
-                                Row(
-
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Text('Purchase Date 25/2/2023'),
-                                    Row(
-
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-
-                                        Text('Details ',style: TextStyle(color: Colors.orange),),
-                                        CircleAvatar(
-                                          backgroundColor: Colors.orange,
-                                          radius: 8,
-                                          child: Icon(Icons.arrow_forward,size: 12,color: Colors.white,),)
-
-                                      ],
-                                    ),
-
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                },
-              ),
             ),
             SizedBox(height: 10,),
             Text('Scan QR code to avail ticket',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
