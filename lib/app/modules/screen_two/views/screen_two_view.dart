@@ -1,9 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../data/coupon_simple_HZ.dart';
-import '../../../data/coupon_simple_HZ2.dart';
-import '../../../data/coupon_simple_VT.dart';
+
+import '../../../data/coupon_ui/coupon_simple_HZ.dart';
 import '../controllers/screen_two_controller.dart';
 
 class ScreenTwoView extends GetView<ScreenTwoController> {

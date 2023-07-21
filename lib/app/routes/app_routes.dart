@@ -5,11 +5,16 @@ abstract class Routes {
   Routes._();
   static const screenOne = _Paths.SCREENONE;
   static const screenTwo = _Paths.SCREENTWO;
+  static const HOME = _Paths.HOME;
+  static const TASK3 = _Paths.TASK3;
+  static const TASK4 = _Paths.TASK4;
 }
 
 abstract class _Paths {
   _Paths._();
   static const SCREENONE = '/screen-one';
   static const SCREENTWO = '/screen-two';
-
+  static const HOME = '/home';
+  static const TASK3 = '/task3';
+  static const TASK4 = '/task4';
 }
