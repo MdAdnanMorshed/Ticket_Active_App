@@ -155,9 +155,7 @@ class ScreenOneView extends GetView<ScreenOneController> {
   }
 
 
-
 }
-
 
 class PainterOne extends CustomPainter {
   @override
