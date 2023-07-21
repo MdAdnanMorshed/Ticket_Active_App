@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/screen_two_controller.dart';
 
-
 class ScreenTwoView extends GetView<ScreenTwoController> {
   const ScreenTwoView({Key? key}) : super(key: key);
   @override
@@ -15,9 +14,9 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
         title:  Container(
 
           height: Get.size.width/2,
-
+          width: Get.size.width,
           margin: const EdgeInsets.only(top: 10),
-          padding: const EdgeInsets.only(left: 10),
+          padding: const EdgeInsets.only(left: 2),
           decoration: BoxDecoration(
             color: Colors.orange,
             borderRadius: BorderRadius.circular(5),
@@ -26,14 +25,15 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
           child:Row(
             mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
+
             children: [
-              Expanded(child:Icon(Icons.arrow_back)),
-              Expanded(child: Text('Tickets',style: TextStyle(color: Colors.white,fontSize: 20),)),
+              Expanded(child:Icon(Icons.arrow_back,color: Colors.white,)),
+              Expanded(child: Text('My Tickets',style: TextStyle(color: Colors.white,fontSize: 20),)),
               Expanded(child: Container()),
             ],
           ),
         ),
-        centerTitle: true,
+
       ),
       body:SingleChildScrollView(
         child: Column(
@@ -161,22 +161,30 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
             Text('Scan QR code to avail ticket',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
 
             Container(
-              height: 100,
+
+              margin: const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+              padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
               child: Row(
 
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Column(
-                    children: [
-                      Text('Purchase Date 25/2/2023'),
-                      Text('Purchase Date 25/2/2023'),
-                      Text('Purchase Date 25/2/2023'),
-                      Text('Purchase Date 25/2/2023'),
-                      Text('Purchase Date 25/2/2023'),
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+
+                    children: const[
+                      Text('Order ID ',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey,fontSize: 16),),
+                      Text('87235',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.orange,fontSize: 16),),
+                      Text('Ticket Purchase Date ',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey,fontSize: 16),),
+                      Text('25/2/2023',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.orange,fontSize: 16),),
+                      Text('Ticket Expire Date',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey,fontSize: 16),),
+                      Text('Note',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.orange,fontSize: 16),),
+                      Text('Ticket Price ',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey,fontSize: 16),),
+                      Text('0',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.orange,fontSize: 16),),
                     ],
                   ),
-                  Image.asset('assets/qrcodebar.PNG'),
+                  Image.asset('assets/qrcodebar.PNG',height: 200,width: 150,),
 
                 ],
               )
@@ -196,7 +204,6 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
 
 
 }
-
 
 class PainterOne extends CustomPainter {
   @override
