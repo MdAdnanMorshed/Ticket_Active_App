@@ -46,7 +46,7 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
 
             ),
             SizedBox(height: 10,),
-            Text('Scan QR code to avail ticket',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+            Text('Scan QR code to avail ticket ',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
 
             Container(
 
