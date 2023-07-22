@@ -89,12 +89,27 @@ class Task3View extends GetView<Task3Controller> {
                 Row(
                   children: [
                     const Text(
-                      'Sell Data : ',
+                      'Sell Date : ',
                       style: TextStyle(
                           fontSize: 12, fontWeight: FontWeight.w300),
                     ),
                     Text(
                       data.sellDate.toString(),
+                      style: const TextStyle(
+                          fontSize: 12, fontWeight: FontWeight.w600),
+                    )
+                  ],
+                ),
+                AppSpace.spaceH4,
+                Row(
+                  children: [
+                    const Text(
+                      'Start Date : ',
+                      style: TextStyle(
+                          fontSize: 12, fontWeight: FontWeight.w300),
+                    ),
+                    Text(
+                      data.startDate.toString(),
                       style: const TextStyle(
                           fontSize: 12, fontWeight: FontWeight.w600),
                     )
