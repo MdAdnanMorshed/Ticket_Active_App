@@ -14,7 +14,7 @@ Flutter Version : 3.7.11
     - http:
     - coupon_uikit: ^4.6.1
     - shimmer: ^2.13.0
-    - shimmer: ^2.0.0
+    - get: ^4.6.5
 
 
 A few resources to get :
@@ -28,7 +28,7 @@ A few resources to get :
 # Screenshot
 <img src="assets/screens/1.PNG" width="30%"><img src="assets/screens/3.PNG" width="30%">
 <img src="assets/screens/2.PNG" width="30%"><img src="assets/screens/4.PNG" width="30%">
-<img src="assets/screens/5.PNG" width="30%"><img src="assets/screens/5.PNG" width="30%">
+<img src="assets/screens/5.PNG" width="30%"><img src="assets/screens/6.PNG" width="30%">
 <img src="assets/logo.PNG" width="30%">
 
 
