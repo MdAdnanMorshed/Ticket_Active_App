@@ -27,13 +27,11 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
             mainAxisSize: MainAxisSize.max,
 
             children: [
-              Expanded(child:Icon(Icons.arrow_back_ios,color: Colors.orange,)),
               Expanded(child: Text('My Tickets',style: TextStyle(color: Colors.orange,fontSize: 20),)),
-              Expanded(child: Container()),
+
             ],
           ),
         ),
-
       ),
       body:SingleChildScrollView(
         child: Column(
@@ -79,7 +77,6 @@ class ScreenTwoView extends GetView<ScreenTwoController> {
                 ],
               )
             ),
-
 
           ],
         ),
